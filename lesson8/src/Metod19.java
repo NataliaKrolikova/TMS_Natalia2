@@ -7,16 +7,9 @@ public class Metod19 {
     public static void main(String[] args) {
 
         String str = "Имеется строка с текстом. Подсчитать количество слов в тексте.";
-        int sum = 0;
-        if(str.length() != 0){
-            sum++;
-            for (int i = 0; i < str.length(); i++) {
-                if(str.charAt(i) == ' '){
-                    sum++;
-                }
-            }
-        }
-
-        System.out.println("Вы ввели "+sum+" слов");
+        str = str.replaceAll("(?U)\\W"," ");
+        str = str.trim();
+        String[] str1 = str.split(" +");
+        System.out.println("Количество слов = " + str1.length);
     }
 }

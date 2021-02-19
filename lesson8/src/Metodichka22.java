@@ -10,7 +10,7 @@ public class Metodichka22 {
     public static void main(String[] args) {
 
         String text = "Добрые слова 0x45AfF несложно, но 0X1B эхо долго живет 0x88CD человеческих сердцах.";
-        Pattern pat = Pattern.compile("0[Xx](([a-fA-F]|[0-9]){0,2}){1,3}");
+        Pattern pat = Pattern.compile(".*0[Xx]?[0-9]?[a-fA-F]?[0-9].*");
         Matcher match = pat.matcher(text);
 
         while (match.find()) {
